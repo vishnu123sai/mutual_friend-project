@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Professional Details</title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Coiny' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="vishnu_portfolio.css">
+
+<body class="main">
+	
+	<nav class="navbar navbar-default navbar-success center">
+        <h3 class="text-center">Mutual Friends</h3>
+	</nav>
+
+    <div class="container well">
+        <div class="col-sm-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-GYOYTBiYiGXRAzct9yDbL5LZ817ZJO0XBTqriGfovr_ykCMopA" height="300" width="200" class="img-responsive center-block">
+{% for i in friend1 %}
+    <h5 class="text-center"> fr1 : {{i}}&nbsp;&nbsp;&nbsp;</h5>
+
+{% endfor %}
+</div>
+
+<div class="col-sm-4">
+    <br>
+    <br>
+        {% if mutual %}
+            {% for i in mutual %}
+            <h5 class="text-center"> mutual : {{i}} &nbsp;&nbsp;&nbsp;</h5>
+            {% endfor %}
+        {% else %}
+            <h5 class="text-center">No Mutual Friends</h5>
+        {% endif %}
+        </div>
+   
+<div class="col-sm-4">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-GYOYTBiYiGXRAzct9yDbL5LZ817ZJO0XBTqriGfovr_ykCMopA" height="300" width="200" class="img-responsive center-block">
+{% for i in friend2 %}
+<h5 class="text-center"> fr2 : {{i}} &nbsp;&nbsp;&nbsp;</h5>
+
+{% endfor %}
+</div>
+<br>
+
+</div>
+</body>
+</html>
